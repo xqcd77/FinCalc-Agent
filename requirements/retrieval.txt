@@ -1,0 +1,4 @@
+-r ../requirements.txt
+onnxruntime>=1.20,<2
+transformers==5.2.0
+# Install a CPU or CUDA PyTorch wheel separately for reranking.

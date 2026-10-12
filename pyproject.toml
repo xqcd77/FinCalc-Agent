@@ -1,0 +1,8 @@
+# Research repository: run scripts from the root, rather than pip-installing
+# the legacy bare-import modules as generic site-packages.
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src/rag", "src/eval", "scripts"]
+[tool.ruff]
+target-version = "py312"
+line-length = 100

@@ -1,0 +1,43 @@
+# Credentials, local environments and caches
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.cache/
+.idea/
+.vscode/
+# Locally acquired datasets, model files, indexes and run outputs
+data/raw/
+data/interim/
+data/processed/
+data/manifests/
+models/**
+!models/README.md
+experiments/**
+!experiments/README.md
+logs/
+outputs/
+reports/local/
+artifacts/
+*.partial
+*.sqlite*
+*.safetensors
+*.onnx
+*.onnx_data
+*.pt
+*.pth
+*.bin
+*.zip
+*.bak*
+*.log
+# Release checks are local; publish only their concise summary
+release_validation.local.json

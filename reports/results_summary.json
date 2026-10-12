@@ -1,0 +1,70 @@
+{
+  "source": "recorded R1 development regression experiment; not rerun by release packaging",
+  "questions": 163,
+  "dataset_role": "development_regression_with_intentional_training_background_overlap",
+  "current_model": {
+    "base": "Qwen3.5-9B",
+    "adapter_training_examples": 5016,
+    "adapter_epoch": 2,
+    "precision": "bfloat16"
+  },
+  "current": {
+    "answer_accuracy": {
+      "correct": 62,
+      "total": 163,
+      "percent": 38.04
+    },
+    "valid_plan_rate": {
+      "valid": 142,
+      "total": 163,
+      "percent": 87.12
+    },
+    "correct_and_model_bindings_complete": {
+      "correct_complete": 60,
+      "total": 163,
+      "percent": 36.81
+    }
+  },
+  "retrieval": {
+    "required_numeric_inputs": 350,
+    "external_evidence_questions": 160,
+    "old_reranked": {
+      "hits": 206,
+      "recall_at_10_percent": 58.86,
+      "mrr_at_10": 0.3645
+    },
+    "pure_rrf": {
+      "hits": 233,
+      "recall_at_10_percent": 66.57,
+      "mrr_at_10": 0.4063
+    },
+    "r1": {
+      "hits": 250,
+      "recall_at_10_percent": 71.43,
+      "mrr_at_10": 0.6446
+    },
+    "annotation": "AI-assisted; no independent human arbitration"
+  },
+  "workflow_binding_completeness": {
+    "before": 24,
+    "after": 90,
+    "total": 163,
+    "before_percent": 14.72,
+    "after_percent": 55.21,
+    "required_input_source": "frozen final model plans; not independent gold"
+  },
+  "historical_unadapted_rag": {
+    "precision": "nf4",
+    "answer_correct": 42,
+    "valid_plans": 128,
+    "total": 163,
+    "answer_percent": 25.77,
+    "valid_plan_percent": 78.53,
+    "same_retrieval_version": false
+  },
+  "limitations": [
+    "Historical comparison does not isolate LoRA effect",
+    "No independent semantic faithfulness score",
+    "Historical ablation answer scoring needs reconciliation"
+  ]
+}

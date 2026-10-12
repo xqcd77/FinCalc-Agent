@@ -1,0 +1,1497 @@
+{
+  "version": "financial-knowledge-v4.6-source-scoped-blueprints-20261006",
+  "purpose": "统一精确财务指标别名、口径保护和按题选择的短计算语义卡；不包含题号、金标或训练答案。",
+  "alias_policy": "aliases为精确同义项；compatibility_aliases为本项目兼容项且需原文核对；related_terms仅用于说明或召回，绝不可作为校验同义项。",
+  "metrics": [
+    {
+      "name": "归母净利润",
+      "aliases": [
+        "归属于母公司股东的净利润",
+        "归属于母公司所有者的净利润",
+        "归母净利润",
+        "归属于母公司净利润",
+        "归属于上市公司股东的净利润",
+        "归属母公司股东的净利润"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "归属于母公司股东的本期净利润，与合并净利润和扣非利润口径不同。",
+      "do_not_substitute": [
+        "净利润",
+        "扣非归母净利润",
+        "营业利润"
+      ],
+      "related_terms": [
+        "净利润",
+        "扣非归母净利润"
+      ],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "净利润",
+      "aliases": [
+        "净利润"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "本期净利润，归属范围由原文说明；不得默认为归母净利润。",
+      "do_not_substitute": [
+        "归母净利润",
+        "扣非净利润",
+        "营业利润",
+        "利润总额"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "营业利润",
+      "aliases": [
+        "营业利润"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "营业活动利润口径，区别于净利润、利润总额及营业收入。",
+      "do_not_substitute": [
+        "营业收入",
+        "净利润",
+        "利润总额"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "营业收入",
+      "aliases": [
+        "营业收入"
+      ],
+      "compatibility_aliases": [
+        "营业总收入"
+      ],
+      "unit_kind": "money",
+      "definition": "本期营业收入；营业总收入仅按本语料兼容处理，仍须核对报告定义。",
+      "do_not_substitute": [
+        "营业利润",
+        "毛利",
+        "营业外收入"
+      ],
+      "related_terms": [],
+      "scope": "仅为本项目现有语料与公式兼容保留营业总收入；不主张在银行、保险等所有行业中两者普适等同。"
+    },
+    {
+      "name": "营业成本",
+      "aliases": [
+        "营业成本"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "营业活动对应成本，与包含其他费用的营业总成本不同。",
+      "do_not_substitute": [
+        "营业总成本",
+        "营业外支出"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "毛利",
+      "aliases": [
+        "毛利"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "同口径营业收入减营业成本的金额，不是毛利率。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "销售毛利率",
+      "aliases": [
+        "销售毛利率",
+        "毛利率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "毛利占同口径营业收入的比例。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "流动资产",
+      "aliases": [
+        "流动资产合计",
+        "流动资产"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "指定报告期末流动资产合计，区别于期间平均余额。",
+      "do_not_substitute": [
+        "平均流动资产",
+        "非流动资产"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "非流动资产",
+      "aliases": [
+        "非流动资产合计",
+        "非流动资产"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "指定报告期末非流动资产合计，与流动资产共同构成总资产。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "资产总计",
+      "aliases": [
+        "资产总额",
+        "资产总计",
+        "总资产"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "指定时点资产总额，区别于流动资产与平均总资产。",
+      "do_not_substitute": [
+        "平均总资产",
+        "流动资产"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "流动负债",
+      "aliases": [
+        "流动负债合计",
+        "流动负债"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "指定时点流动负债合计，不是全部负债。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "非流动负债",
+      "aliases": [
+        "非流动负债合计",
+        "非流动负债"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "指定时点非流动负债合计。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "负债合计",
+      "aliases": [
+        "负债合计",
+        "总负债",
+        "负债总额",
+        "负债总计"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "同一报表时点负债总额，包含流动与非流动负债。",
+      "do_not_substitute": [
+        "流动负债",
+        "带息债务"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "归母权益",
+      "aliases": [
+        "归属于母公司所有者权益合计",
+        "归属于母公司所有者权益",
+        "归属于母公司股东权益",
+        "归母权益",
+        "归属母公司权益",
+        "归属于母公司股东的权益",
+        "归属于母公司股东的所有者权益",
+        "归母所有者权益",
+        "归母所有者权益合计",
+        "归属于母公司股东权益合计"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "归属于母公司股东的所有者权益，不包含少数股东权益。",
+      "do_not_substitute": [
+        "所有者权益",
+        "少数股东权益"
+      ],
+      "related_terms": [
+        "所有者权益",
+        "少数股东权益"
+      ],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "所有者权益",
+      "aliases": [
+        "所有者权益合计",
+        "股东权益总和",
+        "所有者权益",
+        "所有者权益总额",
+        "股东权益总额",
+        "股东权益合计",
+        "股东权益总计",
+        "股东权益"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "合并口径所有者权益总额，包含归母与少数股东权益。",
+      "do_not_substitute": [
+        "归母权益",
+        "少数股东权益"
+      ],
+      "related_terms": [
+        "归母权益",
+        "少数股东权益",
+        "资产总计",
+        "负债合计"
+      ],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "少数股东权益",
+      "aliases": [
+        "少数股东权益"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "合并报表中不归属于母公司股东的权益份额。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "权益乘数",
+      "aliases": [
+        "权益乘数"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "资产与权益的比值；权益范围、期末或平均口径须按报告。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "产权比率",
+      "aliases": [
+        "产权比率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "负债总额与所有者权益总额的比值，除非原文另定口径。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "流动比率",
+      "aliases": [
+        "流动比率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "流动资产与流动负债的比值。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "速动比率",
+      "aliases": [
+        "速动比率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "速动资产与流动负债的比值，速动资产扣减范围依报告。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "存货",
+      "aliases": [
+        "存货余额",
+        "存货"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "指定时点存货余额，不等于平均存货。",
+      "do_not_substitute": [
+        "平均存货"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "应付账款",
+      "aliases": [
+        "应付账款"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "指定时点应付账款余额，与应付账款周转率不同。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "应收账款",
+      "aliases": [
+        "应收账款"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "指定时点应收账款余额，不等于期间平均应收账款。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "经营现金流",
+      "aliases": [
+        "经营活动产生的现金流量净额",
+        "经营现金流量净额",
+        "经营现金流",
+        "经营活动现金流净额",
+        "经营活动现金流量净额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "经营活动产生的现金流量净额，区别于现金余额与筹资现金流。",
+      "do_not_substitute": [
+        "筹资现金流",
+        "净利润",
+        "货币资金"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "现金",
+      "aliases": [
+        "现金"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "仅原文明确称现金的金额，不能自动等同货币资金或现金等价物。",
+      "do_not_substitute": [
+        "货币资金",
+        "现金及现金等价物"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "交易性金融资产",
+      "aliases": [
+        "交易性金融资产"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "按原文披露的交易性金融资产余额，独立于货币资金。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "每股收益",
+      "aliases": [
+        "基本每股收益",
+        "每股收益",
+        "EPS"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "per_share",
+      "definition": "本项目默认基本每股收益口径；每股金额，区别于总净利润和稀释EPS。",
+      "do_not_substitute": [
+        "稀释每股收益",
+        "归母净利润"
+      ],
+      "related_terms": [],
+      "scope": "本项目 EPS/每股收益默认基本口径，仅用于现有语料；原文明确稀释EPS时识别独立指标。"
+    },
+    {
+      "name": "每股净资产",
+      "aliases": [
+        "每股净资产",
+        "BPS"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "per_share",
+      "definition": "同口径净资产归属于每股的账面金额。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "市净率",
+      "aliases": [
+        "市净率",
+        "P/B",
+        "PB"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "股价除以同口径每股净资产的无量纲倍数。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "市盈率",
+      "aliases": [
+        "静态市盈率",
+        "市盈率",
+        "PE"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "静态口径为股价除以相应年度每股收益，不能直接除以总净利润。",
+      "do_not_substitute": [],
+      "related_terms": [
+        "股价",
+        "每股收益",
+        "市净率",
+        "每股净资产"
+      ],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "股价",
+      "aliases": [
+        "收盘价",
+        "股票价格",
+        "股价"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "per_share",
+      "definition": "指定交易日股票价格，不是每股净资产。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "涨跌幅",
+      "aliases": [
+        "日涨跌幅",
+        "涨跌幅"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "指定交易日或期间的价格变化比例。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "涨跌金额",
+      "aliases": ["涨跌额", "日涨跌额", "每日涨跌额", "每日涨跌（元）", "每日涨跌(元)"],
+      "compatibility_aliases": [],
+      "unit_kind": "per_share",
+      "definition": "指定交易日股价相对前一交易日的增减金额，可为负值；不是百分比涨跌幅。",
+      "do_not_substitute": ["涨跌幅"],
+      "related_terms": [],
+      "scope": "金额别名必须有原始货币单位，日期和公司仍须单独核验；裸涨跌按原文单位识别。"
+    },
+    {
+      "name": "息税前利润",
+      "aliases": [
+        "息税前利润",
+        "EBIT"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "扣除利息与所得税之前的利润，区别于税后净利润及经营现金流。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "利息费用",
+      "aliases": [
+        "利息费用"
+      ],
+      "compatibility_aliases": [
+        "利息支出"
+      ],
+      "unit_kind": "money",
+      "definition": "原文利息费用口径；利息支出作为本项目兼容别名，需核对资本化等范围。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "为本项目利息支出角色兼容保留；仍需核对费用化、资本化、综合支出等范围，不主张会计口径普适等同。"
+    },
+    {
+      "name": "所得税",
+      "aliases": [
+        "所得税费用",
+        "所得税"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "本期所得税费用，不是税率或税前利润。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "折旧摊销",
+      "aliases": [
+        "折旧与摊销",
+        "折旧摊销",
+        "折旧及摊销"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "本期折旧与摊销费用，不是累计折旧余额。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "非经常性损益",
+      "aliases": [
+        "非经常性损益",
+        "非经常性损益（合计）",
+        "非经常性损益合计"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "原文定义的非经常性损益，税前税后及归属口径须核对。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "不良贷款余额",
+      "aliases": [
+        "不良贷款余额",
+        "不良贷款"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "不良贷款金额，不是贷款总额或不良贷款率。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "贷款总额",
+      "aliases": [
+        "贷款总额",
+        "总贷款余额",
+        "贷款总余额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "原文贷款总余额，核对本金及减值准备处理。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "固定资产",
+      "aliases": [
+        "固定资产净额",
+        "固定资产",
+        "固定资产账面价值"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "本项目固定资产净额或账面价值口径，不是原值、累计折旧或平均余额。",
+      "do_not_substitute": [
+        "固定资产原值",
+        "平均固定资产",
+        "累计折旧",
+        "固定资产减值准备"
+      ],
+      "related_terms": [
+        "固定资产原值",
+        "累计折旧",
+        "固定资产减值准备"
+      ],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "营运资本",
+      "aliases": [
+        "营运资本",
+        "营运资金"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "营运资本金额，流动资产与流动负债的差额口径须由报告确认。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "带息债务",
+      "aliases": [
+        "带息债务",
+        "有息负债",
+        "有息债务"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "有息债务金额，与总负债范围不同。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "筹资现金流",
+      "aliases": [
+        "筹资活动现金流量净额",
+        "筹资活动产生的现金流量净额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "筹资活动产生的现金流量净额，不是经营现金流。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "总市值",
+      "aliases": [
+        "总市值"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "指定交易日全部股本对应的市值，区别于流通市值。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "成交量",
+      "aliases": [
+        "成交量"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "shares",
+      "definition": "指定交易日或期间成交股数，区别于金额和股本。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "流通股本",
+      "aliases": [
+        "流通股本",
+        "流通股数量"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "shares",
+      "definition": "可流通股数，不是总股本。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "总股本",
+      "aliases": [
+        "总股本"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "shares",
+      "definition": "全部股份股数，不是流通股本。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "每股股利",
+      "aliases": [
+        "每股股利",
+        "每股分红",
+        "每股现金股利"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "per_share",
+      "definition": "每股分配金额，现金或其他分配范围依原文。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "一级资本",
+      "aliases": [
+        "一级资本净额",
+        "一级资本"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "监管一级资本口径，净额或其他范围须核对原文。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "总资本",
+      "aliases": [
+        "资本净额",
+        "总资本"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "监管资本口径，扣减或净额范围须核对原文。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "风险加权资产",
+      "aliases": [
+        "风险加权资产净额",
+        "风险加权资产"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "原文监管风险加权资产口径，区别于账面总资产。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "利息收入",
+      "aliases": [
+        "利息收入"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "本期利息收入，与利息支出和净利息收入不同。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "生息资产",
+      "aliases": [
+        "生息资产",
+        "生息资产总额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "原文生息资产金额，期末或平均余额依题意。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "货币资金",
+      "aliases": [
+        "货币资金",
+        "货币资金余额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "资产负债表货币资金科目，不能自动等同现金及现金等价物。",
+      "do_not_substitute": [
+        "现金",
+        "现金及现金等价物",
+        "交易性金融资产"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "现金及现金等价物",
+      "aliases": [
+        "现金及现金等价物",
+        "现金及现金等价物余额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "现金流量表或附注明确的现金及现金等价物口径。",
+      "do_not_substitute": [
+        "现金",
+        "货币资金",
+        "交易性金融资产"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "固定资产原值",
+      "aliases": [
+        "固定资产原值",
+        "固定资产原价"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "未扣累计折旧和相关减值的固定资产原值口径。",
+      "do_not_substitute": [
+        "固定资产",
+        "累计折旧",
+        "固定资产减值准备"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "累计折旧",
+      "aliases": [
+        "累计折旧",
+        "固定资产累计折旧"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "历期累计折旧余额，不是本期折旧费用或固定资产净额。",
+      "do_not_substitute": [
+        "折旧摊销",
+        "固定资产"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "固定资产减值准备",
+      "aliases": [
+        "固定资产减值准备"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "固定资产累计减值准备余额，区别于原值和折旧。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "平均固定资产",
+      "aliases": [
+        "平均固定资产",
+        "平均固定资产占用",
+        "固定资产平均余额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "期间平均固定资产占用；两点平均或加权方式依原文。",
+      "do_not_substitute": [
+        "固定资产",
+        "固定资产原值"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "平均总资产",
+      "aliases": [
+        "平均总资产",
+        "平均资产总额",
+        "平均资产总计",
+        "总资产平均余额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "期间平均总资产，不得由期末余额直接替代。",
+      "do_not_substitute": [
+        "资产总计"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "平均流动资产",
+      "aliases": [
+        "平均流动资产",
+        "流动资产平均余额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "期间平均流动资产，不得由期末余额直接替代。",
+      "do_not_substitute": [
+        "流动资产"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "平均存货",
+      "aliases": [
+        "平均存货",
+        "存货平均余额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "期间平均存货，不得由期末余额直接替代。",
+      "do_not_substitute": [
+        "存货"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "稀释每股收益",
+      "aliases": [
+        "稀释每股收益",
+        "稀释EPS"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "per_share",
+      "definition": "考虑潜在普通股稀释影响的每股收益，与基本EPS分开。",
+      "do_not_substitute": [
+        "每股收益",
+        "归母净利润"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "扣非净利润",
+      "aliases": [
+        "扣非净利润",
+        "扣除非经常性损益后的净利润"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "扣除非经常性损益后的净利润，归属及税口径按原文。",
+      "do_not_substitute": [
+        "净利润",
+        "扣非归母净利润"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "扣非归母净利润",
+      "aliases": [
+        "扣非归母净利润",
+        "扣除非经常性损益后的归母净利润",
+        "扣除非经常性损益后归属于母公司股东的净利润",
+        "扣除非经常性损益后归属于上市公司股东的净利润"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "扣除非经常性损益后归属于母公司股东的净利润。",
+      "do_not_substitute": [
+        "归母净利润",
+        "扣非净利润"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "营业总成本",
+      "aliases": [
+        "营业总成本"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "原文营业总成本范围，不能仅用营业成本替代。",
+      "do_not_substitute": [
+        "营业成本"
+      ],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "投资收益",
+      "aliases": [
+        "投资收益"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "本期投资收益金额，正负号和计算口径依原文。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "公允价值变动收益",
+      "aliases": [
+        "公允价值变动收益"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "本期公允价值变动损益，区别于投资收益和营业利润。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "营业外收支净额",
+      "aliases": [
+        "营业外收支净额",
+        "营业外收入与支出净额"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "营业外收入减营业外支出的净额。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "营业外收入",
+      "aliases": [
+        "营业外收入"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "本期营业外收入，不是全部营业收入。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "营业外支出",
+      "aliases": [
+        "营业外支出"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "本期营业外支出，不是营业成本或净额。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "利润总额",
+      "aliases": [
+        "利润总额",
+        "税前利润"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "money",
+      "definition": "本期税前利润，区别于营业利润和税后净利润。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "资产负债率",
+      "aliases": [
+        "资产负债率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "同一时点负债总额与资产总额的比值。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "现金循环周期",
+      "aliases": [
+        "现金循环周期",
+        "现金转换周期",
+        "现金周转周期",
+        "CCC"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "day",
+      "definition": "存货周转天数加应收周转天数再减应付周转天数。",
+      "do_not_substitute": [],
+      "related_terms": [
+        "存货周转天数",
+        "应收账款周转天数",
+        "应付账款周转天数"
+      ],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "存货周转天数",
+      "aliases": [
+        "存货周转天数",
+        "存货周转期"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "day",
+      "definition": "存货周转对应期间天数，年度天数口径须有来源。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "应收账款周转天数",
+      "aliases": [
+        "应收账款周转天数",
+        "应收账款周转期"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "day",
+      "definition": "应收账款周转对应期间天数，不是期末应收余额。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "应付账款周转天数",
+      "aliases": [
+        "应付账款周转天数",
+        "应付账款周转期"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "day",
+      "definition": "应付账款周转对应期间天数，不是期末应付余额。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "现金流量利息保障倍数",
+      "aliases": [
+        "现金流量利息保障倍数",
+        "现金利息保障倍数",
+        "现金流利息保障倍数"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "按本语料为经营活动现金流量净额除以利息支出。",
+      "do_not_substitute": [
+        "利息保障倍数"
+      ],
+      "related_terms": [
+        "经营现金流",
+        "利息费用"
+      ],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "利息保障倍数",
+      "aliases": [
+        "利息保障倍数",
+        "利息保障率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "普通口径为息税前利润除以利息费用，区别于现金保障。",
+      "do_not_substitute": [
+        "现金流量利息保障倍数"
+      ],
+      "related_terms": [
+        "息税前利润",
+        "利息费用"
+      ],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "总资产周转率",
+      "aliases": [
+        "总资产周转率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "营业收入与期间平均总资产的比值，具体口径按报告。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "存货周转率",
+      "aliases": [
+        "存货周转率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "营业成本与期间平均存货的比值，不以营业收入代替成本。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "固定资产周转率",
+      "aliases": [
+        "固定资产周转率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "营业收入与期间平均固定资产的比值，平均方式依报告。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "流动资产周转率",
+      "aliases": [
+        "流动资产周转率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "营业收入与期间平均流动资产的比值，平均方式依报告。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "应收账款周转率",
+      "aliases": [
+        "应收账款周转率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "营业收入与期间平均应收账款的比值，具体口径按报告。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "应付账款周转率",
+      "aliases": [
+        "应付账款周转率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "营业成本与期间平均应付账款的比值，具体口径按报告。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "现金比率",
+      "aliases": [
+        "现金比率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "现金类资产与流动负债的比值；是否包含交易性金融资产依报告。",
+      "do_not_substitute": [],
+      "related_terms": [
+        "货币资金",
+        "交易性金融资产",
+        "流动负债"
+      ],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "现金流量比率",
+      "aliases": [
+        "现金流量比率",
+        "现金流比率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "短期偿债口径经营活动现金流量净额与流动负债的比值。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "营业利润率",
+      "aliases": [
+        "营业利润率"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "营业利润与同口径营业收入的比值。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "净资产收益率",
+      "aliases": [
+        "净资产收益率",
+        "ROE"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "利润与权益的比值；归属范围及平均或期末方式必须一致。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    },
+    {
+      "name": "总资产收益率",
+      "aliases": [
+        "总资产收益率",
+        "ROA"
+      ],
+      "compatibility_aliases": [],
+      "unit_kind": "ratio",
+      "definition": "利润与资产的比值；利润口径及平均或期末方式按报告。",
+      "do_not_substitute": [],
+      "related_terms": [],
+      "scope": "原始报告披露口径；别名用于精确识别，不替代公司、期间及单位核验。"
+    }
+  ],
+  "planning_cards": [
+    {
+      "id": "cash_interest_coverage",
+      "priority": 120,
+      "exclusive_group": "interest_coverage",
+      "triggers": [
+        "现金流量利息保障倍数",
+        "现金利息保障倍数",
+        "现金流利息保障倍数"
+      ],
+      "formula_ids": [
+        "cash_interest_coverage"
+      ],
+      "text": "现金流量利息保障倍数按报告为经营活动现金流量净额÷利息支出，不能用息税前利润或净利润替代分子；保留现金流正负号，假设支出只替换同年分母。"
+    },
+    {
+      "id": "ordinary_interest_coverage",
+      "priority": 60,
+      "exclusive_group": "interest_coverage",
+      "triggers": [
+        "利息保障倍数"
+      ],
+      "formula_ids": [
+        "interest_coverage"
+      ],
+      "text": "普通利息保障倍数=息税前利润÷利息费用，现金保障为不同指标。缺EBIT时只可按报告明确会计桥接式推导，不得把净利润直接当EBIT。"
+    },
+    {
+      "id": "cash_cycle_inverse",
+      "priority": 112,
+      "exclusive_group": "turnover_days",
+      "triggers": [
+        "现金循环周期",
+        "现金转换周期",
+        "现金周转周期",
+        "CCC"
+      ],
+      "formula_ids": [
+        "inventory_days_from_cash_cycle",
+        "cash_cycle"
+      ],
+      "text": "现金循环周期=存货天数+应收天数−应付天数；反求存货天数=现金循环周期−应收周转天数+应付周转天数。单位为天，360/365口径依原文，不能当无量纲或新增无来源年度常数。"
+    },
+    {
+      "id": "valuation",
+      "priority": 110,
+      "triggers": [
+        "静态市盈率",
+        "市盈率",
+        "市净率",
+        "PE",
+        "PB",
+        "P/B"
+      ],
+      "formula_ids": [
+        "pe",
+        "pe_from_pb"
+      ],
+      "text": "静态PE=股价÷基本每股收益；PB×BPS可反推股价。EPS/BPS是每股金额，不是总净利润或总权益。区分估值交易日与财报年度；仅当题目要求最小价格单位0.01时按要求取股价精度，禁止套入财报年份。"
+    },
+    {
+      "id": "deducted_profit",
+      "priority": 108,
+      "triggers": [
+        "扣非",
+        "非经常性损益",
+        "调整后EBITDA",
+        "调整后 EBITDA"
+      ],
+      "formula_ids": [
+        "adjusted_ebitda_margin"
+      ],
+      "text": "净利润、归母净利润、扣非净利润与扣非归母净利润不能互换。非经常性损益须核对税前税后及归属范围；调整后EBITDA或扣非计算只按报告明确桥接式，保留损益正负号，不默认所有科目直接加减。"
+    },
+    {
+      "id": "cash_ratio_scope",
+      "priority": 105,
+      "triggers": [
+        "现金比率"
+      ],
+      "formula_ids": [
+        "cash_ratio",
+        "cash_ratio_basic"
+      ],
+      "text": "现金比率的分母是流动负债，不是流动资产；本语料常按(货币资金+交易性金融资产)÷流动负债，是否包含交易性金融资产以报告方法为准。货币资金、现金及现金等价物不得无条件互换。"
+    },
+    {
+      "id": "equity_scope",
+      "priority": 100,
+      "triggers": [
+        "归母权益",
+        "归母所有者权益",
+        "归属于母公司",
+        "股东权益",
+        "所有者权益",
+        "净资产收益率",
+        "产权比率"
+      ],
+      "formula_ids": [
+        "roe_end",
+        "roe_average",
+        "equity_from_assets_liabilities",
+        "debt_to_equity_from_ratio"
+      ],
+      "text": "总所有者权益=归母权益+少数股东权益，总权益不能用归母权益代替。归属及期末/平均口径须与利润匹配；假设仅替换同公司同年同指标，再依明确恒等式推导受影响项，不能将假设资产当权益值。"
+    },
+    {
+      "id": "turnover_average",
+      "priority": 90,
+      "exclusive_group": "turnover_days",
+      "triggers": [
+        "固定资产周转率",
+        "流动资产周转率",
+        "总资产周转率",
+        "存货周转率",
+        "应收账款周转率",
+        "应付账款周转率"
+      ],
+      "formula_ids": [
+        "fixed_asset_turnover",
+        "current_asset_turnover",
+        "asset_turnover",
+        "inventory_turnover",
+        "receivable_turnover",
+        "payable_turnover"
+      ],
+      "text": "周转率按报告使用期间平均余额；两点平均时期初为上年期末，不可只取本年期末。资产/应收周转分子为营业收入，存货/应付通常用营业成本；固定资产净额、原值与平均值不可互换。"
+    },
+    {
+      "id": "turnover_days",
+      "priority": 89,
+      "exclusive_group": "turnover_days",
+      "triggers": [
+        "存货周转天数",
+        "应收账款周转天数",
+        "应付账款周转天数"
+      ],
+      "formula_ids": [
+        "inventory_days",
+        "receivable_days",
+        "payable_days"
+      ],
+      "text": "周转天数不是周转率或资产余额；直接计算需平均余额及报告指定年度天数口径，360/365不得无来源猜定。题目给现金循环周期等关联指标时先选正确反推式，不应强行套直接平均余额公式。"
+    },
+    {
+      "id": "profit_cost_bridge",
+      "priority": 85,
+      "triggers": [
+        "毛利",
+        "营业成本是多少",
+        "营业利润率",
+        "利润总额"
+      ],
+      "formula_ids": [
+        "cost_from_margin",
+        "operating_margin"
+      ],
+      "text": "毛利=营业收入−营业成本，毛利率=毛利÷营业收入；毛利金额不能当毛利率。营业利润、利润总额、净利润及营业总成本不是别名；利润桥接需要报告说明的费用、税项与营业外收支，不能漏项猜值。"
+    },
+    {
+      "id": "cagr_periods",
+      "priority": 80,
+      "triggers": [
+        "复合增长率",
+        "CAGR"
+      ],
+      "formula_ids": [
+        "cagr",
+        "cagr_changed"
+      ],
+      "text": "CAGR=(期末值÷期初值)^(1/增长间隔数)−1；报告指定间隔规则优先，年份跨度与观测期个数不能混用。增长间隔必须可从题目或报告确定；负基数、不适用根式或源定义冲突须显式处理，不能无条件套公式。"
+    }
+  ]
+}

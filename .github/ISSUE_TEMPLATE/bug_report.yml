@@ -1,0 +1,18 @@
+name: Bug report
+description: Report a reproducible workflow, schema or numerical error
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and minimal evidence
+      description: Use a synthetic example and remove keys and private data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+  - type: textarea
+    id: environment
+    attributes:
+      label: Python, dependencies and model configuration

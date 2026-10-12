@@ -1,0 +1,1 @@
+{"finqa_id": "synthetic_legacy_cagr", "company_with_period": "甲公司2022—2024年", "question": "假如甲公司2024年营业利润提高50%，2022年到2024年三年间的复合增长率是多少？", "context_text": "[E3] 甲公司营业利润，2022=5596038041.58 元；2024=0.9383766273 亿元", "selected_evidence": [{"citation": "E3", "chunk_id": "synthetic_cagr", "doc_id": "synthetic_report"}]}

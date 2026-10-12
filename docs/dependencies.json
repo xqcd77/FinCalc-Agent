@@ -1,0 +1,1094 @@
+{
+  "modules": [
+    {
+      "file": "examples/decimal_demo.py",
+      "local_imports": [
+        "src/rag/field_plan_v4.py"
+      ],
+      "external_or_stdlib": [
+        "decimal",
+        "json",
+        "pathlib",
+        "sys"
+      ]
+    },
+    {
+      "file": "scripts/check_release.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "ast",
+        "json",
+        "pathlib",
+        "re",
+        "subprocess"
+      ]
+    },
+    {
+      "file": "scripts/compare_financial_rerank_v49.py",
+      "local_imports": [
+        "src/rag/evidence_rerank_v49.py",
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/hybrid_retrieval.py",
+        "src/rag/rerank_context.py",
+        "src/rag/select_context_v2.py",
+        "src/rag/select_context_v4.py",
+        "src/rag/table_delivery_v48.py",
+        "src/rag/tokenizer_v4.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "sys",
+        "time",
+        "torch",
+        "transformers"
+      ]
+    },
+    {
+      "file": "scripts/complete_numeric_annotation_full163.py",
+      "local_imports": [
+        "scripts/full163_numeric_annotation.py"
+      ],
+      "external_or_stdlib": [
+        "argparse",
+        "collections",
+        "csv",
+        "decimal",
+        "hashlib",
+        "json",
+        "pathlib",
+        "re"
+      ]
+    },
+    {
+      "file": "scripts/download_bge_m3.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "concurrent",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "time",
+        "urllib"
+      ]
+    },
+    {
+      "file": "scripts/download_bge_reranker_large.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "concurrent",
+        "hashlib",
+        "pathlib",
+        "ssl",
+        "time",
+        "urllib"
+      ]
+    },
+    {
+      "file": "scripts/download_selected.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "collections",
+        "hashlib",
+        "io",
+        "json",
+        "pathlib",
+        "re",
+        "time",
+        "urllib",
+        "zipfile"
+      ]
+    },
+    {
+      "file": "scripts/evaluate.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "pathlib",
+        "runpy",
+        "sys"
+      ]
+    },
+    {
+      "file": "scripts/exact_inference_cache.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "collections",
+        "copy",
+        "json"
+      ]
+    },
+    {
+      "file": "scripts/full163_numeric_annotation.py",
+      "local_imports": [
+        "scripts/numeric_annotation_source_grid.py",
+        "src/rag/evidence_prompt_v4.py",
+        "src/rag/select_context_v4.py"
+      ],
+      "external_or_stdlib": [
+        "argparse",
+        "collections",
+        "decimal",
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "sys"
+      ]
+    },
+    {
+      "file": "scripts/model_run_identity.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "hashlib",
+        "pathlib"
+      ]
+    },
+    {
+      "file": "scripts/numeric_annotation_source_grid.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "collections",
+        "json",
+        "pathlib",
+        "re"
+      ]
+    },
+    {
+      "file": "scripts/prepare_qlora_fast_kernels.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "argparse",
+        "hashlib",
+        "importlib",
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "torch",
+        "urllib"
+      ]
+    },
+    {
+      "file": "scripts/qlora_dataset_gate.py",
+      "local_imports": [],
+      "external_or_stdlib": []
+    },
+    {
+      "file": "scripts/qlora_memory_optimizations.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "contextlib",
+        "torch"
+      ]
+    },
+    {
+      "file": "scripts/qlora_run_profile.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "copy"
+      ]
+    },
+    {
+      "file": "scripts/run_rag.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "pathlib",
+        "runpy",
+        "sys"
+      ]
+    },
+    {
+      "file": "scripts/serve_qwen35_9b_lora_bf16.py",
+      "local_imports": [
+        "scripts/exact_inference_cache.py",
+        "scripts/model_run_identity.py"
+      ],
+      "external_or_stdlib": [
+        "fastapi",
+        "json",
+        "os",
+        "pathlib",
+        "peft",
+        "sys",
+        "threading",
+        "time",
+        "torch",
+        "transformers",
+        "uuid",
+        "uvicorn"
+      ]
+    },
+    {
+      "file": "scripts/train_lora.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "argparse",
+        "pathlib",
+        "runpy",
+        "sys"
+      ]
+    },
+    {
+      "file": "scripts/train_lora_qwen35_9b_5250.py",
+      "local_imports": [
+        "scripts/train_qlora_qwen35_9b_v2.py",
+        "scripts/train_qlora_qwen35_9b_v3.py"
+      ],
+      "external_or_stdlib": [
+        "argparse",
+        "collections",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "peft",
+        "torch",
+        "traceback",
+        "transformers"
+      ]
+    },
+    {
+      "file": "scripts/train_qlora_qwen35_9b_v2.py",
+      "local_imports": [
+        "scripts/qlora_dataset_gate.py"
+      ],
+      "external_or_stdlib": [
+        "accelerate",
+        "argparse",
+        "bitsandbytes",
+        "datasets",
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "peft",
+        "sys",
+        "time",
+        "torch",
+        "traceback",
+        "transformers"
+      ]
+    },
+    {
+      "file": "scripts/train_qlora_qwen35_9b_v3.py",
+      "local_imports": [
+        "scripts/qlora_dataset_gate.py",
+        "scripts/qlora_memory_optimizations.py",
+        "scripts/qlora_run_profile.py",
+        "scripts/train_qlora_qwen35_9b_v2.py"
+      ],
+      "external_or_stdlib": [
+        "argparse",
+        "bitsandbytes",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "peft",
+        "time",
+        "torch",
+        "traceback",
+        "transformers"
+      ]
+    },
+    {
+      "file": "scripts/update_dependencies.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "ast",
+        "json",
+        "pathlib"
+      ]
+    },
+    {
+      "file": "scripts/verify_data.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "collections",
+        "hashlib",
+        "json",
+        "pathlib"
+      ]
+    },
+    {
+      "file": "src/eval/evaluate_rag.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "__future__",
+        "collections",
+        "csv",
+        "decimal",
+        "json",
+        "pathlib",
+        "re",
+        "statistics"
+      ]
+    },
+    {
+      "file": "src/eval/evaluate_v3.py",
+      "local_imports": [
+        "src/eval/evaluate_rag.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "collections",
+        "decimal",
+        "json",
+        "pathlib",
+        "re",
+        "unicodedata"
+      ]
+    },
+    {
+      "file": "src/eval/evaluate_v4.py",
+      "local_imports": [
+        "src/eval/evaluate_rag.py",
+        "src/eval/evaluate_v3.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "collections",
+        "json",
+        "pathlib"
+      ]
+    },
+    {
+      "file": "src/eval/evaluate_v48.py",
+      "local_imports": [
+        "src/eval/evaluate_rag.py",
+        "src/eval/trajectory_metrics.py",
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/solution_steps_v48.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "collections",
+        "decimal",
+        "json",
+        "math",
+        "pathlib",
+        "re",
+        "statistics",
+        "sys"
+      ]
+    },
+    {
+      "file": "src/eval/trajectory_metrics.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "json"
+      ]
+    },
+    {
+      "file": "src/rag/agent_v3.py",
+      "local_imports": [
+        "src/rag/field_plan_v3.py",
+        "src/rag/generate_calculate.py",
+        "src/rag/hybrid_retrieval.py",
+        "src/rag/prompt_budget.py",
+        "src/rag/rerank_context.py",
+        "src/rag/select_context_v2.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "collections",
+        "hashlib",
+        "json",
+        "numpy",
+        "pathlib",
+        "pickle",
+        "re",
+        "threading",
+        "time",
+        "urllib"
+      ]
+    },
+    {
+      "file": "src/rag/agent_v4.py",
+      "local_imports": [
+        "src/rag/agent_v3.py",
+        "src/rag/eval_execution.py",
+        "src/rag/evidence_contract_v4.py",
+        "src/rag/evidence_prompt_v4.py",
+        "src/rag/exact_cpu_cache.py",
+        "src/rag/field_plan_v4.py",
+        "src/rag/financial_knowledge_v4.py",
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/generate_calculate.py",
+        "src/rag/hybrid_retrieval.py",
+        "src/rag/plan_contract_v4.py",
+        "src/rag/planning_blueprints_v4.py",
+        "src/rag/prompt_budget.py",
+        "src/rag/question_conditions_v4.py",
+        "src/rag/rerank_context.py",
+        "src/rag/select_context_v4.py",
+        "src/rag/solution_steps_v48.py",
+        "src/rag/stage_prompt_contract_v49.py",
+        "src/rag/table_delivery_v48.py",
+        "src/rag/tokenizer_v4.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "re",
+        "subprocess",
+        "sys",
+        "threading",
+        "time",
+        "urllib"
+      ]
+    },
+    {
+      "file": "src/rag/bge_m3_encoder.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "hashlib",
+        "json",
+        "numpy",
+        "onnxruntime",
+        "pathlib",
+        "tokenizers"
+      ]
+    },
+    {
+      "file": "src/rag/chunk_evidence.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "collections",
+        "datetime",
+        "json",
+        "pathlib",
+        "re",
+        "sys",
+        "typing"
+      ]
+    },
+    {
+      "file": "src/rag/eval_execution.py",
+      "local_imports": [
+        "src/rag/exact_cpu_cache.py"
+      ],
+      "external_or_stdlib": [
+        "concurrent",
+        "fcntl",
+        "hashlib",
+        "json",
+        "msvcrt",
+        "os",
+        "pathlib"
+      ]
+    },
+    {
+      "file": "src/rag/evidence_contract_v4.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "copy"
+      ]
+    },
+    {
+      "file": "src/rag/evidence_prompt_v4.py",
+      "local_imports": [
+        "src/rag/evidence_contract_v4.py",
+        "src/rag/financial_knowledge_v4.py",
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/generate_calculate.py",
+        "src/rag/rerank_context.py",
+        "src/rag/select_context_v2.py",
+        "src/rag/select_context_v4.py",
+        "src/rag/table_delivery_v48.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "decimal",
+        "json",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/evidence_rerank_v49.py",
+      "local_imports": [
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/planning_blueprints_v4.py",
+        "src/rag/question_conditions_v4.py",
+        "src/rag/select_context_v2.py",
+        "src/rag/select_context_v4.py",
+        "src/rag/table_delivery_v48.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/exact_cpu_cache.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "collections",
+        "copy",
+        "hashlib",
+        "json",
+        "os",
+        "threading"
+      ]
+    },
+    {
+      "file": "src/rag/expression_contract_v4.py",
+      "local_imports": [
+        "src/rag/financial_semantics_v4.py"
+      ],
+      "external_or_stdlib": [
+        "ast",
+        "decimal"
+      ]
+    },
+    {
+      "file": "src/rag/field_plan_v3.py",
+      "local_imports": [
+        "src/rag/generate_calculate.py",
+        "src/rag/generate_calculate_v2.py",
+        "src/rag/select_context_v2.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "ast",
+        "datetime",
+        "decimal",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/field_plan_v4.py",
+      "local_imports": [
+        "src/rag/evidence_prompt_v4.py",
+        "src/rag/expression_contract_v4.py",
+        "src/rag/financial_knowledge_v4.py",
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/generate_calculate.py",
+        "src/rag/generate_calculate_v2.py",
+        "src/rag/plan_contract_v4.py",
+        "src/rag/planning_blueprints_v4.py",
+        "src/rag/question_conditions_v4.py",
+        "src/rag/select_context_v2.py",
+        "src/rag/select_context_v4.py",
+        "src/rag/solution_steps_v48.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "ast",
+        "copy",
+        "datetime",
+        "decimal",
+        "json",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/financial_knowledge_v4.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "__future__",
+        "json",
+        "pathlib",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/financial_semantics_v4.py",
+      "local_imports": [
+        "src/rag/exact_cpu_cache.py",
+        "src/rag/financial_knowledge_v4.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "decimal",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/generate_calculate.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "ast",
+        "decimal",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "re",
+        "time",
+        "urllib"
+      ]
+    },
+    {
+      "file": "src/rag/generate_calculate_v2.py",
+      "local_imports": [
+        "src/rag/generate_calculate.py",
+        "src/rag/prompt_budget.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "ast",
+        "decimal",
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "time",
+        "urllib"
+      ]
+    },
+    {
+      "file": "src/rag/hybrid_retrieval.py",
+      "local_imports": [
+        "src/rag/bge_m3_encoder.py",
+        "src/rag/table_structure.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "collections",
+        "hashlib",
+        "jieba",
+        "json",
+        "math",
+        "numpy",
+        "pathlib",
+        "pickle",
+        "re",
+        "time"
+      ]
+    },
+    {
+      "file": "src/rag/parse_latex.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "collections",
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "sys",
+        "typing"
+      ]
+    },
+    {
+      "file": "src/rag/plan_contract_v4.py",
+      "local_imports": [
+        "src/rag/field_plan_v4.py",
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/question_conditions_v4.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "ast",
+        "copy",
+        "decimal",
+        "json",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/planning_blueprints_v4.py",
+      "local_imports": [
+        "src/rag/field_plan_v4.py",
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/question_conditions_v4.py"
+      ],
+      "external_or_stdlib": [
+        "ast",
+        "datetime",
+        "json",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/prompt_budget.py",
+      "local_imports": [],
+      "external_or_stdlib": [
+        "__future__",
+        "json",
+        "os",
+        "pathlib",
+        "tokenizers",
+        "transformers",
+        "typing"
+      ]
+    },
+    {
+      "file": "src/rag/question_conditions_v4.py",
+      "local_imports": [
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/select_context_v2.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "datetime",
+        "json",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/rerank_context.py",
+      "local_imports": [
+        "src/rag/evidence_contract_v4.py",
+        "src/rag/exact_cpu_cache.py",
+        "src/rag/table_structure.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "statistics",
+        "time",
+        "tokenizers",
+        "torch",
+        "transformers"
+      ]
+    },
+    {
+      "file": "src/rag/select_context_v2.py",
+      "local_imports": [
+        "src/rag/generate_calculate_v2.py",
+        "src/rag/prompt_budget.py",
+        "src/rag/rerank_context.py",
+        "src/rag/table_structure.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "dataclasses",
+        "decimal",
+        "json",
+        "pathlib",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/select_context_v4.py",
+      "local_imports": [
+        "src/rag/evidence_prompt_v4.py",
+        "src/rag/field_plan_v4.py",
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/generate_calculate.py",
+        "src/rag/hybrid_retrieval.py",
+        "src/rag/prompt_budget.py",
+        "src/rag/rerank_context.py",
+        "src/rag/select_context_v2.py",
+        "src/rag/table_delivery_v48.py",
+        "src/rag/table_semantics_v4.py",
+        "src/rag/tokenizer_v4.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "copy",
+        "json",
+        "pathlib",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/solution_steps_v48.py",
+      "local_imports": [],
+      "external_or_stdlib": []
+    },
+    {
+      "file": "src/rag/stage_prompt_contract_v49.py",
+      "local_imports": [
+        "src/rag/field_plan_v4.py",
+        "src/rag/financial_knowledge_v4.py",
+        "src/rag/prompt_budget.py",
+        "src/rag/question_conditions_v4.py"
+      ],
+      "external_or_stdlib": []
+    },
+    {
+      "file": "src/rag/table_delivery_v48.py",
+      "local_imports": [
+        "src/rag/exact_cpu_cache.py",
+        "src/rag/rerank_context.py",
+        "src/rag/select_context_v4.py",
+        "src/rag/table_structure.py"
+      ],
+      "external_or_stdlib": [
+        "copy",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/table_semantics_v4.py",
+      "local_imports": [
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/table_structure.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "copy",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/table_structure.py",
+      "local_imports": [
+        "src/rag/exact_cpu_cache.py"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "re"
+      ]
+    },
+    {
+      "file": "src/rag/tokenizer_v4.py",
+      "local_imports": [
+        "src/rag/prompt_budget.py"
+      ],
+      "external_or_stdlib": [
+        "jinja2",
+        "pathlib",
+        "tokenizers"
+      ]
+    },
+    {
+      "file": "tests/test_chunk_evidence.py",
+      "local_imports": [
+        "src/rag/chunk_evidence.py"
+      ],
+      "external_or_stdlib": [
+        "json",
+        "pathlib",
+        "sys",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_eval_acceleration.py",
+      "local_imports": [
+        "src/rag/agent_v4.py",
+        "src/rag/eval_execution.py",
+        "src/rag/evidence_prompt_v4.py",
+        "src/rag/exact_cpu_cache.py",
+        "src/rag/field_plan_v4.py",
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/rerank_context.py",
+        "src/rag/table_delivery_v48.py",
+        "src/rag/tokenizer_v4.py"
+      ],
+      "external_or_stdlib": [
+        "copy",
+        "importlib",
+        "json",
+        "os",
+        "pathlib",
+        "re",
+        "sys",
+        "tempfile",
+        "threading",
+        "time",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_eval_v4.py",
+      "local_imports": [
+        "src/eval/evaluate_v4.py"
+      ],
+      "external_or_stdlib": [
+        "json",
+        "pathlib",
+        "sys",
+        "tempfile",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_financial_knowledge_v4.py",
+      "local_imports": [
+        "src/rag/financial_knowledge_v4.py"
+      ],
+      "external_or_stdlib": [
+        "json",
+        "pathlib",
+        "re",
+        "sys",
+        "tempfile",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_generate_calculate.py",
+      "local_imports": [
+        "src/rag/generate_calculate.py"
+      ],
+      "external_or_stdlib": [
+        "json",
+        "pathlib",
+        "sys",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_hybrid_retrieval.py",
+      "local_imports": [
+        "src/rag/hybrid_retrieval.py"
+      ],
+      "external_or_stdlib": [
+        "numpy",
+        "pathlib",
+        "sys",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_parse_latex.py",
+      "local_imports": [
+        "src/rag/parse_latex.py"
+      ],
+      "external_or_stdlib": [
+        "pathlib",
+        "sys",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_qlora_dataset_gate.py",
+      "local_imports": [
+        "scripts/qlora_dataset_gate.py"
+      ],
+      "external_or_stdlib": [
+        "copy",
+        "pathlib",
+        "sys",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_rag_v3.py",
+      "local_imports": [
+        "src/rag/agent_v3.py",
+        "src/rag/field_plan_v3.py",
+        "src/rag/generate_calculate.py"
+      ],
+      "external_or_stdlib": [
+        "json",
+        "pathlib",
+        "re",
+        "sys",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_rag_v4.py",
+      "local_imports": [
+        "src/rag/agent_v4.py",
+        "src/rag/expression_contract_v4.py",
+        "src/rag/field_plan_v4.py",
+        "src/rag/financial_semantics_v4.py",
+        "src/rag/prompt_budget.py",
+        "src/rag/select_context_v4.py",
+        "tests/test_rag_v3.py"
+      ],
+      "external_or_stdlib": [
+        "copy",
+        "decimal",
+        "json",
+        "pathlib",
+        "sys",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_rag_v4_8.py",
+      "local_imports": [
+        "src/eval/evaluate_v48.py",
+        "src/rag/bge_m3_encoder.py",
+        "src/rag/hybrid_retrieval.py",
+        "src/rag/solution_steps_v48.py",
+        "src/rag/table_delivery_v48.py"
+      ],
+      "external_or_stdlib": [
+        "copy",
+        "decimal",
+        "json",
+        "numpy",
+        "pathlib",
+        "sys",
+        "tempfile",
+        "tokenizers",
+        "types",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_rerank_context.py",
+      "local_imports": [
+        "src/rag/rerank_context.py"
+      ],
+      "external_or_stdlib": [
+        "pathlib",
+        "sys",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_retrieval_query_cache.py",
+      "local_imports": [
+        "src/rag/agent_v3.py"
+      ],
+      "external_or_stdlib": [
+        "pathlib",
+        "sys",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_table_semantics_v4.py",
+      "local_imports": [
+        "src/rag/select_context_v2.py",
+        "src/rag/table_semantics_v4.py"
+      ],
+      "external_or_stdlib": [
+        "json",
+        "pathlib",
+        "sys",
+        "unittest"
+      ]
+    },
+    {
+      "file": "tests/test_trajectory_metrics.py",
+      "local_imports": [
+        "src/eval/trajectory_metrics.py"
+      ],
+      "external_or_stdlib": [
+        "pathlib",
+        "sys",
+        "unittest"
+      ]
+    }
+  ]
+}
