@@ -97,11 +97,6 @@ reports/           已记录实验的公开摘要
 - [贡献指南](CONTRIBUTING.md)
 - [参考与第三方资源](docs/REFERENCES.md)
 
-## 参考项目
-
-文档组织参考[Fin-R1](https://github.com/SUFE-AIFLM-Lab/Fin-R1)的工作流程、数据、训练、评测与使用说明，及[FinQA](https://github.com/czyssrs/FinQA)的任务与程序化推理资料。
-本项目的当前实现采用单Agent RAG与LoRA，不包含Fin-R1的强化学习训练。
-
 ## 许可范围
 
 当前没有为源码指定额外的开源许可；公开可查看与克隆不等于授予所有再分发用途。
