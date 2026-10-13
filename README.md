@@ -10,24 +10,7 @@ Qwen3.5-9B · Agentic RAG · 多步规划 · Decimal工具计算 · LoRA
 
 ## 系统架构
 
-```mermaid
-flowchart LR
-  A[财报LaTeX] --> B[解析与表格证据块]
-  B --> C[BM25 + BGE-M3索引]
-  Q[用户问题] --> D[混合检索与RRF]
-  C --> D
-  D --> E[bge-reranker-large + 计算需求覆盖保护]
-  E --> F[公式规划与依赖拆解]
-  F --> G[原始数值证据绑定]
-  G --> H[来源 / 年份 / 单位 / 表达式校验]
-  H --> I[Decimal工具计算]
-  I --> J[答案与引用]
-  H -->|缺项| D
-  H -->|错误反馈| F
-  T[阶段对齐CoT监督] --> L[LoRA训练]
-  L -.适配模型.-> F
-  L -.适配模型.-> G
-```
+![FinCalc-Agent 技术架构图](docs/assets/fincalc-agent-architecture.png)
 
 ## 主要能力
 

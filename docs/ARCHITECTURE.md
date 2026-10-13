@@ -1,5 +1,7 @@
 # 架构与依赖
 
+![FinCalc-Agent 技术架构图](assets/fincalc-agent-architecture.png)
+
 单Agent、程序编排的Plan-and-Execute式工作流。不存在独立规划／证据／复核多Agent服务。
 
 | 阶段 | 核心模块 | 输入／输出 |

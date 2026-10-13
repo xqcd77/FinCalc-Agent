@@ -28,6 +28,8 @@ def main():
         if path.stat().st_size > 5*1024*1024: issues.append({'file':rel,'rule':'large_release_file'})
         try: text = path.read_text(encoding='utf-8')
         except (UnicodeDecodeError,OSError):
+            if path.suffix.lower() in {'.png', '.jpg', '.jpeg', '.webp'}:
+                continue
             issues.append({'file':rel,'rule':'unexpected_binary'}); continue
         if path.suffix == '.py':
             try: ast.parse(text, filename=rel)
@@ -35,7 +37,7 @@ def main():
         for rule, pattern in SECRET_RULES.items():
             if pattern.search(text): issues.append({'file':rel,'rule':rule})
         if path.suffix == '.md':
-            for link in re.findall(r'(?<!!)\[[^\]]+\]\(([^)]+)\)', text):
+            for link in re.findall(r'!?\[[^\]]+\]\(([^)]+)\)', text):
                 if '://' in link or link.startswith('#'): continue
                 target = link.split('#',1)[0]
                 if target and not (path.parent/target).exists(): issues.append({'file':rel,'rule':'broken_link','target':target})
