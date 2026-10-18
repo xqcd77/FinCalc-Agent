@@ -8,6 +8,31 @@ Qwen3.5-9B · Agentic RAG · 多步规划 · Decimal工具计算 · LoRA
 模型负责规划和绑定，程序负责来源、期间、单位与表达式校验及确定性计算；
 缺项触发定向补检索，错误反馈驱动受限修复。
 
+## 产品原型与界面展示
+
+**[在线体验 FinCalc Studio](https://fincalc-studio-20261018.cuddlytiger3.chatgpt.site)** · 无需 ChatGPT 登录
+
+Demo 账号：`demo`　密码：`FinCalc2026!`
+
+围绕“提问—核对证据—查看推理—复核结果”组织研究工作台，提供 5 类自包含计算示例、表格与引用回查、执行轨迹、资料导入、参数配置及分析记录。界面采用玻璃叠层、轻量悬浮和流程连线动效，支持桌面与移动端。
+
+| Demo 登录 | 研究总览 |
+|:---:|:---:|
+| ![Demo 账号登录页](docs/assets/product/01-demo-login.png) | ![研究总览与场景入口](docs/assets/product/02-research-overview.png) |
+| 演示账号入口与能力介绍 | 可点击工作流、场景入口与异常处理路径 |
+
+| 计算工作台 | 证据资料库 |
+|:---:|:---:|
+| ![计算结果、完整财报表格与推理轨迹](docs/assets/product/03-calculation-workbench.png) | ![证据表格预览与资料管理](docs/assets/product/04-evidence-library.png) |
+| 计算结果、指标依赖、原表与来源回查 | 表格预览、搜索分类与本地资料导入 |
+
+| 评测中心 | 参数实验室 |
+|:---:|:---:|
+| ![评测指标与检索链路对比](docs/assets/product/05-evaluation-center.png) | ![LoRA 配置与学习率曲线](docs/assets/product/06-parameter-lab.png) |
+| 已记录指标、对比图与统计口径 | 检索与 LoRA 配置设计、学习率曲线及配置导出 |
+
+在线版本为交互原型：内置公司与财报数据为虚构示例，示例计算不调用实时大模型；评测中心单独展示项目已记录的实验结果。支持导入真实运行轨迹；真实模型调用需在本地配置项目桥接。Demo 登录仅用于展示交互，不用于保护私有数据。
+
 ## 系统架构
 
 ![FinCalc-Agent 技术架构图](docs/assets/fincalc-agent-architecture.png)
