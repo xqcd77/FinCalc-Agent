@@ -10,7 +10,7 @@ Qwen3.5-9B · Agentic RAG · 多步规划 · Decimal工具计算 · LoRA
 
 ## 产品原型与界面展示
 
-**[在线体验 FinCalc Studio](https://fincalc-studio-20261018.cuddlytiger3.chatgpt.site)** · 无需 ChatGPT 登录
+**[在线体验 FinCalc Studio](https://fincalc-studio-20261018.cuddlytiger3.chatgpt.site)** 
 
 Demo 账号：`demo`　密码：`FinCalc2026!`
 
@@ -31,7 +31,7 @@ Demo 账号：`demo`　密码：`FinCalc2026!`
 | ![评测指标与检索链路对比](docs/assets/product/05-evaluation-center.png) | ![LoRA 配置与学习率曲线](docs/assets/product/06-parameter-lab.png) |
 | 已记录指标、对比图与统计口径 | 检索与 LoRA 配置设计、学习率曲线及配置导出 |
 
-在线版本为交互原型：内置公司与财报数据为虚构示例，示例计算不调用实时大模型；评测中心单独展示项目已记录的实验结果。支持导入真实运行轨迹；真实模型调用需在本地配置项目桥接。Demo 登录仅用于展示交互，不用于保护私有数据。
+在线版本为交互原型：示例计算不调用实时大模型；评测中心单独展示项目已记录的实验结果。支持导入真实运行轨迹；真实模型调用需在本地配置项目桥接。Demo 登录仅用于展示交互，不用于保护私有数据。
 
 ## 系统架构
 
